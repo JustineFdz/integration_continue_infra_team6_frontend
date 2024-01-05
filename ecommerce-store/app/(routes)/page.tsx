@@ -1,6 +1,6 @@
 import getBillboard from "@/actions/get-billboard";
 import getProducts from "@/actions/get-products";
-import Billboard from "@/app/components/billboard";
+import Billboard from "@/app/components/ui/billboard";
 import Container from "@/app/components/ui/container";
 import ProductList from "../components/product-list";
 
