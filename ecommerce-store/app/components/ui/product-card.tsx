@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import Currency from "@/app/components/ui/currency";
 import IconButton from "@/app/components/ui/icon-button";
 import usePreviewModal from "@/hooks/use-preview-modal";
-// import useCart from "@/hooks/use-cart";
+import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
 
 interface ProductCard {
@@ -17,7 +17,7 @@ interface ProductCard {
 
 const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const previewModal = usePreviewModal();
-  // const cart = useCart();
+  const cart = useCart();
   const router = useRouter();
 
   const handleClick = () => {
@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
 
-    // cart.addItem(data);
+    cart.addItem(data);
   };
 
   return (
